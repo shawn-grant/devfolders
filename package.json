@@ -2,7 +2,11 @@
   "name": "devfolders",
   "version": "1.0.0",
   "description": "CLI tool to change boring folder icons to cool dev-related icons",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "devfolder": "src/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +15,21 @@
     "url": "git+https://github.com/shawn-grant/devfolders.git"
   },
   "keywords": [
-    "folder", "icons", "devfolder", "devicons"
+    "folder",
+    "icons",
+    "devfolder",
+    "devicons",
+    "folder icons"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Shawn Grant",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shawn-grant/devfolders/issues"
   },
-  "homepage": "https://github.com/shawn-grant/devfolders#readme"
+  "homepage": "https://github.com/shawn-grant/devfolders#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "command-line-args": "^5.2.1",
+    "inquirer": "^8.2.0"
+  }
 }

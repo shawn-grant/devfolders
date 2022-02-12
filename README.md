@@ -1,40 +1,49 @@
 
-# devfolders
+# devfolders (pre-release)
 <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" width="80"/>
 
 CLI tool to change boring folder icons to cool dev-related icons
 
 ## Installation
-Requires nodejs installed
+You can install the Devfolders CLI using npm (Node Package Manager). Note that you will need to install [Node.js](https://nodejs.org) and [npm](https://npmjs.org). Installing Node.js should install npm as well.
+**Make sure to install it globally with -g**
+
+`npm install -g devfolders`
 
 ## Usage
-`npx devfolder`
+`devfolder` or `devfolder <options>`
 
 Options:
 
-| flag | Description |
+| Option | Description |
 | --- | ----------- |
-| -v, --version | Outputs the current version of devfolders |
-|-t, --target| "sub" or "current". Specifies which directory to target. Targets current folder if omitted|
-|-i, --icon | Specifies which icon to use. See available icons below|
+| list | List the available folder icons|
+| remove | Undo the folder icons|
+| -v, --version | Outputs the current version of devfolder |
+| -t, --target | `"sub"` or `"current"`. Specifies which directory to target. Targets current folder if omitted|
+| -i, --icon | Specifies which icon to use. See available icons below|
 
 ## Examples
 
 Default process with prompts
 
-`> npx devfolder`
+`> devfolder`
 
 Target all sub-directories
 
-`> npx devfolder -t sub`
+`> devfolder -t sub`
 
 Specify folder icon
 
-`> npx devfolder -i flutter`
+`> devfolder -i flutter`
 
-Multiple flags
+Set the current folder's icon
 
-`> npx devfolder -t current -i flutter`
+`> devfolder -t current -i flutter`
+
+Remove the current folder's icon
+
+`> devfolder remove -t current`
 
 ---
 ## Available Icons
@@ -42,3 +51,13 @@ Multiple flags
 - reactjs
 - android
 - unity3d
+
+
+## TODO
+- More icons
+- Add macOS and Linux support
+
+## Contributing
+
+### adding icons:
+

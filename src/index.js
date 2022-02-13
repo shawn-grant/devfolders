@@ -1,17 +1,12 @@
 #!/usr/bin/env node
 
-// windows shell commands
-// attrib +r "path_to_folder"
-// attrib +s +h "path_to_folder/desktop.ini"
-
-// you may want to ignore it in .gitignore files
 import latestVersion from 'latest-version';
 import compareVersions from 'compare-versions';
 import commandLineArgs from 'command-line-args';
 import chalk from 'chalk';
 import {askTarget, askIcon, changeFolderIcons, getAvailableIconsList} from './devfolder.js'
 
-const CURRENT_VERSION = '1.0.3'
+const CURRENT_VERSION = '1.0.4'
 
 const optionDefinitions = [
     { name: 'command', type: String, defaultOption: true },
@@ -76,6 +71,10 @@ try {
             
             case 'remove':
                 // show a list of icons available
+                break;
+            
+            default:
+                console.log(chalk.yellow("Invalid command '" + commandArg + "'"))
                 break;
         }
 

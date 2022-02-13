@@ -1,5 +1,5 @@
 
-# devfolders (pre-release)
+# devfolders
 <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" width="80"/>
 
 CLI tool to change boring folder icons to cool dev-related icons
@@ -11,7 +11,11 @@ You can install the Devfolders CLI using npm (Node Package Manager). Note that y
 `npm install -g devfolders`
 
 ## Usage
-`devfolder` or `devfolder <options>`
+`$ devfolder` 
+
+or 
+
+`$ devfolder <options>`
 
 Options:
 
@@ -27,31 +31,43 @@ Options:
 
 Default process with prompts
 
-`> devfolder`
+`$ devfolder`
 
 Target all sub-directories
 
-`> devfolder -t sub`
+`$ devfolder -t sub`
 
 Specify folder icon
 
-`> devfolder -i flutter`
+`$ devfolder -i flutter`
 
 Set the current folder's icon
 
-`> devfolder -t current -i flutter`
+`$ devfolder -t current -i flutter`
 
 Remove the current folder's icon
 
-`> devfolder remove -t current`
+`$ devfolder remove -t current`
 
+> Note: devfolder works by creating a desktop config file in the specified folder. You may want to add it to any .gitignore files
 ---
 ## Available Icons
 - flutter
 - reactjs
+- nodejs
 - android
+- javascript
+- typescript
 - unity3d
-
+- android
+- apple
+- angular
+- c
+- cpp
+- csharp
+- java
+- python
+- ruby
 
 ## TODO
 - More icons

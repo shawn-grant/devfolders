@@ -106,6 +106,10 @@ async function changeIcon(folderPath, iconName) {
 
     if (process.platform == 'win32') {
         try {
+            //remove the config if it already exists
+            if (fs.existsSync(path.join(folderPath, 'desktop.ini')))
+                await fs.unlinkSync(path.join(folderPath, 'desktop.ini'))
+            
             // create the icon config file
             await fs.writeFileSync(path.join(folderPath, 'desktop.ini'),
                 '[.ShellClassInfo]\n' +
@@ -113,8 +117,8 @@ async function changeIcon(folderPath, iconName) {
                 'IconIndex=0')
             
             // run commands to let the system recognize the file
-            exec('attrib +r ' + folderPath)
-            exec('attrib +s +h ' + folderPath + '/desktop.ini')
+            await exec('attrib +r ' + folderPath)
+            await exec('attrib +s +h ' + folderPath + '/desktop.ini')
         }
         catch (error) {
             console.log(chalk.red(error))

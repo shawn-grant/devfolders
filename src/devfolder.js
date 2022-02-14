@@ -117,8 +117,8 @@ async function changeIcon(folderPath, iconName) {
                 'IconIndex=0')
             
             // run commands to let the system recognize the file
-            await exec('attrib +r ' + folderPath)
-            await exec('attrib +s +h ' + folderPath + '/desktop.ini')
+            await exec(`attrib +r "${folderPath}"`)
+            await exec(`attrib +s +h "${folderPath}/desktop.ini"`)
         }
         catch (error) {
             console.log(chalk.red(error))

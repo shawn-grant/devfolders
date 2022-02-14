@@ -1,6 +1,6 @@
 {
   "name": "devfolders",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "CLI tool to change boring folder icons to cool dev-related icons",
   "main": "src/index.js",
   "type": "module",

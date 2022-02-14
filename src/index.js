@@ -6,7 +6,7 @@ import commandLineArgs from 'command-line-args';
 import chalk from 'chalk';
 import {askTarget, askIcon, changeFolderIcons, getAvailableIconsList} from './devfolder.js'
 
-const CURRENT_VERSION = '1.0.4'
+const CURRENT_VERSION = '1.0.6'
 
 const optionDefinitions = [
     { name: 'command', type: String, defaultOption: true },
@@ -93,7 +93,7 @@ try {
     }
 
     if (icons.includes(iconArg) == false) {
-        console.log(chalk.yellow('invalid icon'))
+        console.log(chalk.yellow('invalid icon name'))
         iconName = await askIcon()
     }
     else {

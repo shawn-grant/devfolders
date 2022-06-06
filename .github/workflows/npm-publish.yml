@@ -9,6 +9,8 @@ on:
 
 jobs:
   publish-npm:
+    # Only run on the upstream repo, not forks
+    if: github.repository == 'shawn-grant/devfolders'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
